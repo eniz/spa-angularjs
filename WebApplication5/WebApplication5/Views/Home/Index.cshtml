@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-app="F1FeederApp" ng-controller="driversController">
+    <ul>
+        <li ng-class="{active: menuActive == 'drivers'}">
+            <a href="#/drivers">
+                <span>Drivers</span>
+            </a>
+        </li>
+
+        <li ng-class="{active: menuActive == 'teams'}">
+            <a href="#/teams">
+                <span>Teams</span>
+            </a>
+        </li>
+
+        <li ng-class="{active: menuActive == 'races'}">
+            <a href="#/races">
+                <span>Races</span>
+            </a>
+        </li>
+    </ul>
+    <section id="main">
+        <ng-view></ng-view>
+    </section>
+</div>
